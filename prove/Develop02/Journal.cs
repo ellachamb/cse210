@@ -3,8 +3,6 @@ using System.IO;
 public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
-
-
     public string NameFile()
     {
         Console.WriteLine("Enter file name (please add .txt to the end): ");
