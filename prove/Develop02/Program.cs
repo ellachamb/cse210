@@ -42,10 +42,12 @@ class Program
                     }
                     break;
                 case "3":
-                    Console.WriteLine("Load");
+                    string fileName = journal.NameFile();
+                    journal.LoadFile(fileName);
                     break;
                 case "4":
-                    Console.WriteLine("Save");
+                    string fileName1 = journal.NameFile();
+                    journal.SaveFile(fileName1, journal._entries);
                     break;
                 case "5":
                     Console.WriteLine("Quit");

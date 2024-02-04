@@ -20,9 +20,4 @@ public class PromptGenerator
         return _prompts[index];
     }
 
-    // public static void Display()
-    // {
-    //     Console.WriteLine($"Prompt: {_randomPrompt}");
-    // }
-
 }
