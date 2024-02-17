@@ -2,7 +2,7 @@ using System;
 public class Scripture
 {
     private List<Word> _words = new List<Word>();
-    private List<int> _hiddenWords = new List<int>();
+    private List<int> _hiddenWordsIndex = new List<int>();
     public Scripture(string userText)
     {
         string[] words = userText.Split(' ');
@@ -29,10 +29,10 @@ public class Scripture
         {
 
             int index = random.Next(_words.Count);
-            if (!_hiddenWords.Contains(index))
+            if (!_hiddenWordsIndex.Contains(index))
             {
                 _words[index].HideWord();
-                _hiddenWords.Add(index);
+                _hiddenWordsIndex.Add(index);
             }
             else
             {

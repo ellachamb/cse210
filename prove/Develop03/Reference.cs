@@ -1,33 +1,32 @@
 using System;
 public class Reference
 {
-    public string Book { get; set; }
-    public string Chapter { get; set; }
-    public string Verse { get; set; }
-
-    public string EndVerse { get; set; }
+    private string _book;
+    private string _chapter;
+    private string _verse;
+    private string _endVerse;
     public Reference(string book, string chapter, string verse)
     {
-        Book = book;
-        Chapter = chapter;
-        Verse = verse;
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
     }
     public Reference(string book, string chapter, string verse, string endVerse)
     {
-        Book = book;
-        Chapter = chapter;
-        Verse = verse;
-        EndVerse = endVerse;
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = endVerse;
     }
 
     public string GetReference2()
     {
-        return Book + " " + Chapter + ":" + Verse + "-" + EndVerse;
+        return _book + " " + _chapter + ":" + _verse + "-" + _endVerse;
     }
 
     public string GetReference1()
     {
-        return Book + " " + Chapter + ":" + Verse;
+        return _book + " " + _chapter + ":" + _verse;
     }
 
 }
