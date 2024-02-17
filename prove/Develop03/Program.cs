@@ -12,7 +12,7 @@ class Program
         string chapter = Console.ReadLine();
         Console.Write("Please enter the verse number: ");
         string verse = Console.ReadLine();
-        Console.Write("Please enter the end verse number (if there is only one verse enter 'N/A': ");
+        Console.Write("Please enter the end verse number (if there is only one verse enter 'N/A'): ");
         string endVerse = Console.ReadLine();
         Console.WriteLine("Please enter the text of the verse: ");
         string verseText = Console.ReadLine();
@@ -26,6 +26,7 @@ class Program
         {
             Console.Clear();
             scripture.HideWord();
+            Console.WriteLine(reference);
             scripture.DisplayHiddenVerse();
             Console.WriteLine("Press enter to continue or type 'quit' to finish: ");
         }
