@@ -61,8 +61,8 @@ public class Activity
     {
         Console.WriteLine("Well done!!");
         ShowSpinner(1);
-        Console.WriteLine($"You have completed {_duration} seconds of the {_activityName} Activity");
-        ShowSpinner(1);
+        Console.WriteLine($"You have completed {_duration} seconds of the {_activityName} Activity.");
+        ShowSpinner(2);
     }
 
 }

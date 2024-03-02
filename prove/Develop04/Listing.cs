@@ -1,5 +1,6 @@
 public class Listing : Activity
 {
+    private int _listingCount = 0;
     private List<string> _prompts = new List<string>()
     {
         "What are you grateful for?",
@@ -18,15 +19,10 @@ public class Listing : Activity
         "What are some things you want to learn?",
     };
 
-    private int _numOfInputs;
+    private List<string> _responses = new List<string>();
 
     public Listing() : base("Listing", "This activity will help you reflect on the good things in your life and help you focus on the positive.")
     {
-    }
-
-    public void SetNumOfInputs(int numOfInputs)
-    {
-        _numOfInputs = numOfInputs;
     }
 
     public string GetRandomPrompt()
@@ -42,8 +38,21 @@ public class Listing : Activity
         Console.WriteLine("--- " + GetRandomPrompt() + " ---");
         Console.WriteLine("You may begin in: ");
         ShowCountdownTimer();
-        Console.Write("> ");
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(duration);
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("> ");
+            string input = Console.ReadLine();
+            _responses.Add(input);
+        }
+        Console.WriteLine($"You listed {_responses.Count} responses!");
+        _listingCount++;
     }
 
+    public int GetListingCount()
+    {
+        return _listingCount;
+    }
 
 }

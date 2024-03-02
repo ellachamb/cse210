@@ -1,5 +1,6 @@
 public class Reflecting : Activity
 {
+    private int _reflectingCount = 0;
     private List<int> _usedIndices = new List<int>();
     private List<string> _reflectionPrompts = new List<string>()
     {
@@ -64,9 +65,15 @@ public class Reflecting : Activity
         Console.Clear();
         for (int i = duration / 10; i > 0; i--)
         {
-            Console.Write(">" + GetRandomQuestion());
+            Console.Write("> " + GetRandomQuestion());
             ShowSpinner(5);
         }
         _usedIndices.Clear();
+        _reflectingCount++;
+    }
+
+    public int GetReflectingCount()
+    {
+        return _reflectingCount;
     }
 }
