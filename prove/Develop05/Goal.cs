@@ -36,7 +36,7 @@ public class Goal
                 outputFile.Write($"Name: {goal.GetName()} ");
                 outputFile.Write($"Description: {goal.GetDescription()} ");
                 outputFile.Write($"Points: {goal.GetPoints()} ");
-                outputFile.Write($"Completion: {goal.IsComplete()} ");
+                outputFile.WriteLine($"Completion: {goal.IsComplete()} ");
             }
             Console.WriteLine($"Saved file to {fileName}");
         }

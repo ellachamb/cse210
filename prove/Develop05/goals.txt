@@ -1,1 +1,2 @@
-Name: TEstingDescription: TestingPoints: 3Completion:  
+Name: Water Description: Drink more water Points: 40 Completion: X 
+Name: Temple Description: Go to temple once a week Points: 50 Completion: X 
