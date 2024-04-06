@@ -1,21 +1,37 @@
 public class Activity
 {
-    private double _distance;
-    private double _speed;
-    private double _pace;
     private string _date;
     private int _length;
 
-    public Activity(double distance, double speed, double pace, string date, int length)
+    public Activity(string date, int length)
     {
-        _distance = distance;
-        _speed = speed;
-        _pace = pace;
         _date = date;
         _length = length;
     }
+
+    public virtual string GetSummary()
+    {
+        return $"{_date} {GetType().Name} ({_length} min): Distance: {GetDistance()} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min/km";
+    }
+
     public virtual double GetDistance()
     {
-        return _distance;
+        return 0;
     }
+
+    public virtual double GetSpeed()
+    {
+        return 0;
+    }
+
+    public virtual double GetPace()
+    {
+        return 0;
+    }
+
+    public int GetLength()
+    {
+        return _length;
+    }
+
 }
